@@ -1,0 +1,8 @@
+<p class="title">Médias de Valores de Compra e Venda Pro Municipio</p>
+<div *ngFor="let v of valorcompraVenda">
+    <div>
+        <p class="municipio">Municipio: {{ v.atributo }}</p>
+        <p class="compraVenda">Média valor de Compra: {{ v.mediaValorCompra }}</p>
+        <p class="compraVenda">Média valor de Venda: {{ v.mediaValorVenda }}</p>
+    </div>
+</div>

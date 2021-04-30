@@ -1,0 +1,20 @@
+.title{
+    text-align: center;
+    font-size: 22px;
+    font-family: Roboto , 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.municipio{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    font-family: Roboto , 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.compraVenda{
+    text-align: center;
+    font-size: 12px;
+    font-family: Roboto , 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+div{
+    background-color: aliceblue;
+    border-radius: 5px;
+}

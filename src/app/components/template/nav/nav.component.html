@@ -1,0 +1,39 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">
+                    list
+                </i>
+                Lista Historico 
+            </a>
+            <a mat-list-item routerLink="/crud-historico">
+                <i class="material-icons">                  
+                    how_to_reg
+                </i>
+                CRUD de Histórico de Preço
+            </a>
+            <a mat-list-item routerLink="/base-municipio">
+                <i class="material-icons">                  
+                    local_offer
+                </i>
+                Média de Preço Base Município
+            </a>
+            <a mat-list-item routerLink="/dados-distribuidora">
+                <i class="material-icons">                  
+                    account_balance
+                </i>
+                Dados Agrupados por Distribuidora
+            </a>
+            <a mat-list-item routerLink="/valor-compra-venda">
+                <i class="material-icons">                  
+                    request_quote
+                </i>
+                Valores Médio Compra/Venda
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

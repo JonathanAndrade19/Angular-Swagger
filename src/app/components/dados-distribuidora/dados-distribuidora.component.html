@@ -1,0 +1,16 @@
+<p class="title">Dados Agrupados por Distribuidora</p>
+<div *ngFor="let dados of dadosDistri">
+    <div class="campoInformacao">
+        <p>Região: {{ dados.siglaRegiao }}</p>
+        <p>Estado: {{ dados.siglaEstado }}</p>
+        <p>Municipio: {{ dados.municipio }}</p>
+        <p>Revendedora: {{ dados.revendedora }}</p>
+        <p>Codigo Instalação: {{ dados.codInstalacao }}</p>
+        <p>Produto: {{ dados.produto }}</p>
+        <p>Data Coleta: {{ dados.dataColeta }}</p>
+        <p>Valor da Compra: {{ dados.valorCompra }}</p>
+        <p>Valor da Venda: {{ dados.valorVenda }}</p>
+        <p>Unidade Média: {{ dados.unidadeMedida }}</p>
+        <p>Bandeira: {{ dados.bandeira }}</p>
+    </div>
+</div>

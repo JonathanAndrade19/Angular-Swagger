@@ -1,0 +1,13 @@
+.title{
+    text-align: center;
+    font-size: 22px;
+    font-family: Roboto , 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.campoInformacao{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 100px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
