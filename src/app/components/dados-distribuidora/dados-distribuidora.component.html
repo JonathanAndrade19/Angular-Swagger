@@ -1,16 +1,46 @@
 <p class="title">Dados Agrupados por Distribuidora</p>
-<div *ngFor="let dados of dadosDistri">
-    <div class="campoInformacao">
-        <p>Região: {{ dados.siglaRegiao }}</p>
-        <p>Estado: {{ dados.siglaEstado }}</p>
-        <p>Municipio: {{ dados.municipio }}</p>
-        <p>Revendedora: {{ dados.revendedora }}</p>
-        <p>Codigo Instalação: {{ dados.codInstalacao }}</p>
-        <p>Produto: {{ dados.produto }}</p>
-        <p>Data Coleta: {{ dados.dataColeta }}</p>
-        <p>Valor da Compra: {{ dados.valorCompra }}</p>
-        <p>Valor da Venda: {{ dados.valorVenda }}</p>
-        <p>Unidade Média: {{ dados.unidadeMedida }}</p>
-        <p>Bandeira: {{ dados.bandeira }}</p>
-    </div>
+<ng-container>
+<table class="table table-hover">
+    <thead>
+        <th scope="col">Região</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Municipio</th>
+        <th scope="col">Revendedora</th>
+        <th scope="col">Codigo Instalação</th>
+        <th scope="col">Produto</th>
+        <th scope="col">Data Coleta</th>
+        <th scope="col">Valor da Compra</th>
+        <th scope="col">Valor da Venda</th>
+        <th scope="col">Unidade Média</th>
+        <th scope="col">Bandeira</th>
+    </thead>
+    <tbody class="campoInformacao">
+        <tr *ngFor="let dados of dadosDistri | paginate : {
+            itemsPerPage: tableSize,
+            currentPage: page,
+            totalItems: count
+            };"
+        >
+            <td>{{ dados.siglaRegiao }}</td>
+            <td>{{ dados.siglaEstado }}</td>
+            <td>{{ dados.municipio }}</td>
+            <td>{{ dados.revendedora }}</td>
+            <td>{{ dados.codInstalacao }}</td>
+            <td>{{ dados.produto }}</td>
+            <td>{{ dados.dataColeta | date: 'dd/MM/yyyy'}}</td>
+            <td>{{ dados.valorCompra }}</td>
+            <td>{{ dados.valorVenda }}</td>
+            <td>{{ dados.unidadeMedida }}</td>
+            <td>{{ dados.bandeira }}</td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <pagination-controls 
+        previousLabel="Prev" 
+        nextLabel="Next"
+        (pageChange)="onTableDataChange($event)"
+    >
+    </pagination-controls>
 </div>
+</ng-container>

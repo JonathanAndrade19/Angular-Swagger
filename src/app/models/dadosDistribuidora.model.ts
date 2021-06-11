@@ -1,14 +1,14 @@
-export class dadosDistribuidora{
-    public id!: number;
-    public siglaRegiao!: string;
-    public siglaEstado!: string;
-    public municipio!: string;
-    public revendedora!: string;
-    public codInstalacao!: number;
-    public produto!: string;
-    public dataColeta!: number;
-    public valorCompra!: number;
-    public valorVenda!: number;
-    public unidadeMedida!: string;
-    public bandeira!:  string;
+export interface dadosDistribuidora{
+    id: number;
+    siglaRegiao: string;
+    siglaEstado: string;
+    municipio: string;
+    revendedora: string;
+    codInstalacao: number;
+    produto: string;
+    dataColeta: number;
+    valorCompra: number;
+    valorVenda: number;
+    unidadeMedida: string;
+    bandeira:  string;
 }

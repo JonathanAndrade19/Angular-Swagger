@@ -1,8 +1,33 @@
 <p class="title">Médias de Valores de Compra e Venda Pro Municipio</p>
-<div *ngFor="let v of valorcompraVenda">
+<ng-container>
+    <table class="table table-hover">
+        <thead>
+            <th scope="col">Municipio</th>
+            <th scope="col">Média valor de Compra</th>
+            <th scope="col">Média valor de Venda</th>
+        </thead>
+        <tbody class="ValorDeVenda">
+            <tr *ngFor="let compraVenda of valorcompraVenda | paginate : {
+                itemsPerPage: tableSize,
+                currentPage: page,
+                totalItems: count
+                };"
+            >
+                <td>{{ compraVenda.atributo }}</td>
+                <td>{{ compraVenda.mediaValorCompra | currency:"BRL" }}</td>
+                <td>{{ compraVenda.mediaValorVenda | currency:"BRL" }}</td>           
+            </tr>
+        </tbody>
+    </table>
     <div>
-        <p class="municipio">Municipio: {{ v.atributo }}</p>
-        <p class="compraVenda">Média valor de Compra: {{ v.mediaValorCompra }}</p>
-        <p class="compraVenda">Média valor de Venda: {{ v.mediaValorVenda }}</p>
+        <pagination-controls previousLabel="Prev" nextLabel="Next"
+            (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+    </div>
+</ng-container>
+
+<div>
+    <div class="spinner-border text-success" role="status" *ngIf="!this.loading">
+        <span class="sr-only">Loading...</span>
     </div>
 </div>

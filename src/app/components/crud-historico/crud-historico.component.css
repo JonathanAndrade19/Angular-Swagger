@@ -1,13 +1,26 @@
-.historicos{
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-right: 100px;
-    background-color: aliceblue;
-    border-radius: 5px;
+.historicos {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-right: 100px;
+  background-color: white;
+  border-radius: 5px;
 }
-p{
-    text-align: center;
-    font-size: 12px;
-    font-family: Roboto , 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+p {
+  text-align: center;
+  font-size: 12px;
+  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+tbody td {
+  font-size: 14px;
+  text-align: center;
+}
+
+tbody td button {
+  margin-left: 1rem;
+}
+
+thead th {
+  font-size: 18px;
+  text-align: center;
 }

@@ -1,0 +1,22 @@
+<div class="container">
+    <form (ngSubmit)="save()" [formGroup]="form">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="">Combustivel:</label>
+                <input type="text" formControlName="combustivel" class="form-control" />
+            </div>
+            <div class="form-group col-md-4">
+                <label for="date">Data:</label>
+                <input type="date" formControlName="data" class="form-control" />
+            </div>
+            <div class="form-group col-md-2">
+                <label for="">Preço:</label>
+                <input type="text" formControlName="preco" currencyMask class="form-control" />
+            </div>
+            <div class="form-group col-md-2" id="buttonSalvar">
+                <button type="submit" class="btn btn-success">Salvar</button>
+            </div>
+        </div>
+    </form>
+</div>
+

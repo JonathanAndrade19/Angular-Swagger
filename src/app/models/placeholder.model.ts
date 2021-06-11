@@ -1,6 +1,6 @@
-export class Historico {
-    public id!: number;
-    public combustivel!: number;
-    public data!: string;
-    public preco!: number;
+export interface Historico {
+    id?: number;
+    combustivel: number;
+    data: string;
+    preco: number;
 }
